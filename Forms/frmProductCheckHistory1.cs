@@ -266,7 +266,7 @@ namespace BMS
             DataSet ds = ProductCheckHistoryDetailBO.Instance.GetDataSet("spGetWorkingByProduct",
                 new string[] { "@WorkingStepID", "@WorkingStepCode", "@ProductCode" },
                 new object[] { workingStepID, stepCode, arr1[1].ToString() });
-
+            int x = 0;
             _dtData = ds.Tables[0];
             grdData.DataSource = _dtData;
             txtStepName.Text = TextUtils.ToString(ds.Tables[1].Rows.Count > 0 ? ds.Tables[1].Rows[0][0] : "");
