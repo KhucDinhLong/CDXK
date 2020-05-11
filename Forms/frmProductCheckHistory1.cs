@@ -350,6 +350,7 @@ namespace BMS
             if (OrderInfoFolder == string.Empty || !Directory.Exists(OrderInfoFolder))
             {
                 FolderBrowserDialog od = new FolderBrowserDialog();
+                od.Description = "Chọn thư mục lưu thông tin Order";
                 if (od.ShowDialog() == DialogResult.OK)
                 {
                     OrderInfoFolder = od.SelectedPath;
