@@ -390,7 +390,7 @@ namespace BMS
                     cModel.WorkerCode = txtWorker.Text.Trim();
                     cModel.StandardValue = TextUtils.ToString(grvData.GetRowCellValue(j, colStandardValue));
                     cModel.RealValue = TextUtils.ToString(grvData.GetRowCellValue(j, "RealValue" + (i - 2)));
-                    if (!string.IsNullOrEmpty(cModel.RealValue.Trim()))
+                    if (j == 0 && !string.IsNullOrEmpty(cModel.RealValue.Trim()))
                     {
                         countProductInThisOrder++;
                     }
@@ -420,11 +420,8 @@ namespace BMS
             }
 
             string OderInfoFilePath = OrderInfoFolder + "\\" + txtOrder.Text + "-" + countProductInThisOrder + ".txt";
+            File.WriteAllText(OderInfoFilePath, txtOrder.Text + "-" + countProductInThisOrder);
 
-            if (!File.Exists(OderInfoFilePath))
-            {
-                File.Create(OderInfoFilePath);
-            } 
             grdData.DataSource = null;
             txtQRCode.Text = "";
             txtOrder.Text = "";
