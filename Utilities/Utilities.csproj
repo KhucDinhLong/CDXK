@@ -179,6 +179,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Utils\DocUtils.cs" />
+    <Compile Include="Utils\FlexibleMessageBox.cs" />
     <Compile Include="Utils\MyGridLocalizer.cs" />
     <Compile Include="Utils\RFID_Reader.cs" />
     <Compile Include="Utils\TextUtils.cs" />

@@ -18,6 +18,7 @@ using System.Net.Sockets;
 using BMS.Utils;
 using System.IO;
 using Vila.Extensions;
+using JR.Utils.GUI.Forms;
 
 namespace BMS
 {
@@ -565,7 +566,12 @@ namespace BMS
                         }
                     }
                 }
-                MessageBox.Show("Không Tìm Thấy Vị Trí Thích Hợp", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                while (true) 
+                {
+                    if (FlexibleMessageBox.Show("Không Tìm Thấy Vị Trí Thích Hợp", "Cảnh Báo", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning) == DialogResult.OK)
+                        break;
+                }
                 txtData.Text = string.Empty;
                 txtData.Focus();
             }
