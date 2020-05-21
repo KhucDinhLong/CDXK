@@ -18,8 +18,8 @@ namespace BMS
         static int _AppRegionID;
         static bool _IsRoot = false;
 
-        static string _ConnectionString = @"Server=LONGDK\SQLEXPRESS;Database=SumitomoTest;uid=sa;pwd=123@123a;";
-        //static string _ConnectionString = "";
+        //static string _ConnectionString = @"Server=LONGDK\SQLEXPRESS;Database=SumitomoTest;uid=sa;pwd=123@123a;";
+        static string _ConnectionString = "";
 
         static string _AppUserCode;
         static int _StoreID;

@@ -326,7 +326,6 @@ namespace BMS
             this.colRealValue1.Name = "colRealValue1";
             this.colRealValue1.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue1.OptionsColumn.AllowSize = false;
-            this.colRealValue1.OptionsColumn.ReadOnly = true;
             this.colRealValue1.Visible = true;
             this.colRealValue1.VisibleIndex = 2;
             this.colRealValue1.Width = 150;
@@ -349,7 +348,6 @@ namespace BMS
             this.colRealValue2.Name = "colRealValue2";
             this.colRealValue2.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue2.OptionsColumn.AllowSize = false;
-            this.colRealValue2.OptionsColumn.ReadOnly = true;
             this.colRealValue2.Visible = true;
             this.colRealValue2.VisibleIndex = 3;
             this.colRealValue2.Width = 150;
@@ -373,7 +371,6 @@ namespace BMS
             this.colRealValue3.Name = "colRealValue3";
             this.colRealValue3.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue3.OptionsColumn.AllowSize = false;
-            this.colRealValue3.OptionsColumn.ReadOnly = true;
             this.colRealValue3.Visible = true;
             this.colRealValue3.VisibleIndex = 4;
             this.colRealValue3.Width = 150;
@@ -396,7 +393,6 @@ namespace BMS
             this.colRealValue4.Name = "colRealValue4";
             this.colRealValue4.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue4.OptionsColumn.AllowSize = false;
-            this.colRealValue4.OptionsColumn.ReadOnly = true;
             this.colRealValue4.Visible = true;
             this.colRealValue4.VisibleIndex = 5;
             this.colRealValue4.Width = 150;
@@ -420,7 +416,6 @@ namespace BMS
             this.colRealValue5.Name = "colRealValue5";
             this.colRealValue5.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue5.OptionsColumn.AllowSize = false;
-            this.colRealValue5.OptionsColumn.ReadOnly = true;
             this.colRealValue5.Visible = true;
             this.colRealValue5.VisibleIndex = 6;
             this.colRealValue5.Width = 150;
@@ -443,7 +438,6 @@ namespace BMS
             this.colRealValue6.Name = "colRealValue6";
             this.colRealValue6.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             this.colRealValue6.OptionsColumn.AllowSize = false;
-            this.colRealValue6.OptionsColumn.ReadOnly = true;
             this.colRealValue6.Visible = true;
             this.colRealValue6.VisibleIndex = 7;
             this.colRealValue6.Width = 150;

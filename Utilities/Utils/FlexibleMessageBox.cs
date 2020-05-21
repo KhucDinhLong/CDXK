@@ -313,7 +313,7 @@ namespace JR.Utils.GUI.Forms
                 this.richTextBoxMessage.BackColor = System.Drawing.Color.White;
                 this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.richTextBoxMessage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FlexibleMessageBoxFormBindingSource, "MessageText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 this.richTextBoxMessage.Location = new System.Drawing.Point(50, 19);
                 this.richTextBoxMessage.Margin = new System.Windows.Forms.Padding(0);
                 this.richTextBoxMessage.Name = "richTextBoxMessage";
@@ -857,9 +857,10 @@ namespace JR.Utils.GUI.Forms
                 SetDialogIcon(flexibleMessageBoxForm, icon);
 
                 //Set the font for all controls
-                flexibleMessageBoxForm.Font = FONT;
-                flexibleMessageBoxForm.richTextBoxMessage.Font = FONT;
-                flexibleMessageBoxForm.richTextBoxMessage.Font = new Font("Microsoft Sans Serif", 24);
+                //flexibleMessageBoxForm.Font = FONT;
+                //flexibleMessageBoxForm.richTextBoxMessage.Font = FONT;
+                //flexibleMessageBoxForm.richTextBoxMessage.Font = new Font("Microsoft Sans Serif Regular", 24);
+                //flexibleMessageBoxForm.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
                 //Calculate the dialogs start size (Try to auto-size width to show longest text row). Also set the maximum dialog size. 
                 SetDialogSizes(flexibleMessageBoxForm, text, caption);

@@ -19,6 +19,7 @@ using BMS.Utils;
 using System.IO;
 using Vila.Extensions;
 using JR.Utils.GUI.Forms;
+using Forms;
 
 namespace BMS
 {
@@ -420,8 +421,12 @@ namespace BMS
                 }
             }
 
-            string OderInfoFilePath = OrderInfoFolder + "\\" + txtOrder.Text + "-" + countProductInThisOrder + ".txt";
-            File.WriteAllText(OderInfoFilePath, txtOrder.Text + "-" + countProductInThisOrder);
+            string OderInfoFilePath = OrderInfoFolder + "\\" + "CDXK-Order.txt";
+            if (File.Exists(OderInfoFilePath))
+            {
+                File.AppendAllText(OderInfoFilePath, Environment.NewLine);
+            }
+            File.AppendAllText(OderInfoFilePath, txtOrder.Text + "-" + countProductInThisOrder);
 
             grdData.DataSource = null;
             txtQRCode.Text = "";
@@ -555,6 +560,13 @@ namespace BMS
                         {
                             for (int j = 2; j < grvData.VisibleColumns.Count; j++)
                             {
+                                if (txtData.Text.ToLower().Equals(grvData.GetRowCellValue(i, grvData.VisibleColumns[j].FieldName).ToString().Trim().ToLower()))
+                                {
+                                    txtData.Text = string.Empty;
+                                    txtData.Focus();
+                                    return;
+                                }
+                                    
                                 if (string.IsNullOrEmpty(grvData.GetRowCellValue(i, grvData.VisibleColumns[j].FieldName).ToString()))
                                 {
                                     grvData.SetRowCellValue(i, grvData.VisibleColumns[j].FieldName.ToString(), txtData.Text);
@@ -566,12 +578,8 @@ namespace BMS
                         }
                     }
                 }
-                while (true) 
-                {
-                    if (FlexibleMessageBox.Show("Không Tìm Thấy Vị Trí Thích Hợp", "Cảnh Báo", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning) == DialogResult.OK)
-                        break;
-                }
+                WarningForm frmWarning = new WarningForm();
+                frmWarning.ShowDialog();
                 txtData.Text = string.Empty;
                 txtData.Focus();
             }
