@@ -422,11 +422,7 @@ namespace BMS
             }
 
             string OderInfoFilePath = OrderInfoFolder + "\\" + "CDXK-Order.txt";
-            if (File.Exists(OderInfoFilePath))
-            {
-                File.AppendAllText(OderInfoFilePath, Environment.NewLine);
-            }
-            File.AppendAllText(OderInfoFilePath, txtOrder.Text + "-" + countProductInThisOrder);
+            File.WriteAllText(OderInfoFilePath, txtOrder.Text + "-" + countProductInThisOrder);
 
             grdData.DataSource = null;
             txtQRCode.Text = "";
